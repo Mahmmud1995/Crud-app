@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/crud.css" />
+  </head>
+  <body>
+      <h1 class="text-center mt-3">CRUD</h1>
+      <h2 class="text-center">Product Management System</h2>
+      
+
+    <div class="container py-5">
+      <label for="productName">Product Name:</label>
+      <input class="form-control mb-3" type="text" id="productName" />
+      <label for="productPrice">Product Price:</label>
+      <input class="form-control mb-3" type="number" id="productPrice" />
+      <label for="productCategory">Product Category:</label>
+      <input class="form-control mb-3" type="text" id="productCategory" />
+      <label for="productDesc">Product Description:</label>
+      <textarea id="productDesc" class="form-control mb-3"></textarea>
+      <button onclick="addProduct();" class="w-100 btn btn-lg btn-dark d-block"id="addBtn">Add Product</button>
+      <button class="w-100 btn btn-lg btn-warning d-none mt-2" id="updateBtn" onclick="updateData();">Update Product</button>
+    </div>
+
+    <div class="w-75 m-auto my-3 text-center">
+      <input type="text"oninput="searchProduct (this.value)"class="form-control w-75 my-3 mx-auto" placeholder="Search.."/>
+      <table class="table">
+        <thead>
+          <th>Index</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Desc</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/crud.js"></script>
+  </body>
+</html>
